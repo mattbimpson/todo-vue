@@ -5,7 +5,7 @@
     </div>
     <div className="add-container">
       <input type="text" id="txtTodo" placeholder="what do you need to do?" v-model='description' />
-      <input type="button" id="btnAdd" className="btn" @click='addTodo' value="add todo" />
+      <input type="button" id="btnAdd" className="btn" @click='addTodo' value="add todo" :disabled=addDisabled />
     </div>
     <TodoList />
   </div>
@@ -20,6 +20,11 @@ export default {
   name: 'app',
   components: {
     TodoList
+  },
+  computed: {
+    addDisabled() {
+      return !this.description
+    }
   },
   methods: {
     addTodo() {
