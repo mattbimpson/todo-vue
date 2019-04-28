@@ -5,5 +5,8 @@ export default {
         const id = state.todos.length ? state.todos[state.todos.length -1].id + 1 : 0;
         todo.id = id
         state.todos.push(todo)
+    },
+    [m.removeTodo](state, payload) {
+        state.todos = state.todos.filter(x => x.id !== payload)
     }
 }

@@ -5,4 +5,7 @@ export default {
     [a.addTodo]({ commit }, payload) {
         commit(m.addTodo, payload)
     },
+    [a.removeTodo]({ commit }, payload) {
+        commit(m.removeTodo, payload)
+    }
 }

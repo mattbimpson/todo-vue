@@ -10,6 +10,7 @@
     <TodoList />
   </div>
 </template>
+<style src="./styles/app.css"></style>
 
 <script>
 import * as a from './store/action-types';
@@ -22,8 +23,9 @@ export default {
   },
   methods: {
     addTodo() {
-      const payload = { text: 'new todo' }
+      const payload = { text: this.description }
       this.$store.dispatch(a.addTodo, payload)
+      this.description = ''
     }
   },
   data() {
@@ -33,14 +35,3 @@ export default {
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

@@ -17,14 +17,6 @@ export default {
     components: {
         Todo
     },
-    // data: function() {
-    //     return {
-    //         todos: [
-    //             { id: 1, text: 'first thing' },
-    //             { id: 2, text: 'second thing' }
-    //         ]
-    //     };
-    // }
     computed: {
     ...mapGetters([
       'todos',
