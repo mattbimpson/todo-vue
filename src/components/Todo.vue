@@ -11,12 +11,12 @@
 </template>
 <style src="../styles/todo.css"></style>
 <script>
-import * as a from '../store/action-types';
+import * as a from '../store/action-types'
 export default {
     name: 'Todo',
     props: ['todo'],
     methods: {
-        remove() {
+        remove () {
             this.$store.dispatch(a.removeTodo, this.todo.id)
         }
     }

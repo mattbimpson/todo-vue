@@ -13,7 +13,7 @@
 <style src="./styles/app.css"></style>
 
 <script>
-import * as a from './store/action-types';
+import * as a from './store/action-types'
 import TodoList from './components/TodoList.vue'
 
 export default {
@@ -22,18 +22,18 @@ export default {
     TodoList
   },
   computed: {
-    addDisabled() {
+    addDisabled () {
       return !this.description
     }
   },
   methods: {
-    addTodo() {
+    addTodo () {
       const payload = { text: this.description }
       this.$store.dispatch(a.addTodo, payload)
       this.description = ''
     }
   },
-  data() {
+  data () {
     return {
       description: ''
     }
