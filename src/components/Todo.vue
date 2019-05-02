@@ -1,24 +1,13 @@
 <template>
-    <div className='todo-container'>
-        <div className='todo-item'>
+    <div :class="{'todo-container': !completed, 'todo-container completed': completed}">
+        <div class='todo-item'>
             {{todo.text}}
         </div>
-        <div className='todo-controls'>
-            done <input type="checkbox" />
+        <div class='todo-controls'>
+            done <input type="checkbox" @change="toggleCompleted" />
             <input type="button" className="btn" value="remove" @click="remove" />
         </div>
     </div>
 </template>
-<style src="../styles/todo.css"></style>
-<script>
-import * as a from '../store/action-types'
-export default {
-    name: 'Todo',
-    props: ['todo'],
-    methods: {
-        remove () {
-            this.$store.dispatch(a.removeTodo, this.todo.id)
-        }
-    }
-}
-</script>
+<script src="./Todo.js" />
+<style scoped src="./Todo.css" />

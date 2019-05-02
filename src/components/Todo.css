@@ -4,11 +4,12 @@
     background-color: darkgreen;
 }
 
-.todo-item, .todo-controls {
+.todo-item {
     display: block;
 }
 
 .todo-controls {
+    display: block;
     font-size: small;
 }
 
@@ -18,6 +19,7 @@
     padding: 5px;
     margin-top: 5px;
     width: 600px;
+    text-align: center;
 }
 
 .btn {
