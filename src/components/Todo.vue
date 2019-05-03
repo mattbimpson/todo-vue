@@ -4,7 +4,7 @@
             {{todo.text}}
         </div>
         <div class='todo-controls'>
-            done <input type="checkbox" @change="toggleCompleted" />
+            done <input type="checkbox" @change="toggleCompleted" :model="completed" />
             <input type="button" className="btn" value="remove" @click="remove" />
         </div>
     </div>
