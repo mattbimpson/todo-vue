@@ -17,5 +17,8 @@ export default {
 
             return x
         })
+    },
+    [m.clearTodos] (state) {
+        state.todos = []
     }
 }

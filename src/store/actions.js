@@ -10,5 +10,8 @@ export default {
     },
     [a.updateTodo] ({ commit }, payload) {
         commit(m.updateTodo, payload)
+    },
+    [a.clearTodos] ({ commit }) {
+        commit(m.clearTodos)
     }
 }

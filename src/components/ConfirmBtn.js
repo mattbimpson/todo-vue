@@ -12,7 +12,7 @@ export default {
             this.confirming = !this.confirming
         },
         confirmYes () {
-            this.$emit('action')
+            this.$emit('confirm-action')
             this.toggleConfirm()
         },
         confirmNo () {

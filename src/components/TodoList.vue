@@ -6,7 +6,7 @@
             </ol>
         </ul>
         <div v-show="this.todos.length">
-            <ConfirmBtn buttonText="Clear all your todos?" @action="clearAll" />
+            <ConfirmBtn buttonText="Clear all your todos?" @confirm-action="clearAll" />
         </div>
     </div>
 </template>
@@ -15,6 +15,7 @@
 import Todo from './Todo.vue'
 import ConfirmBtn from './ConfirmBtn.vue'
 import { mapGetters } from 'vuex'
+import * as a from '../store/action-types'
 
 export default {
     name: 'TodoList',
@@ -23,14 +24,14 @@ export default {
         ConfirmBtn
     },
     computed: {
-    ...mapGetters([
-      'todos'
-    ]),
+        ...mapGetters([
+        'todos'
+        ])
+    },
     methods: {
         clearAll () {
-            window.alert('clearing')
+            this.$store.dispatch(a.clearTodos)
         }
     }
   }
-}
 </script>
