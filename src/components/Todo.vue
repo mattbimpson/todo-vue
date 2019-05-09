@@ -5,7 +5,7 @@
         </div>
         <div class='todo-controls'>
             done <input type="checkbox" @change="toggleCompleted" :model="completed" id="btnDone" />
-            <input type="button" className="btn" value="remove" @click="remove" />
+            <input type="button" class="btn" value="remove" @click="remove" />
         </div>
     </div>
 </template>
