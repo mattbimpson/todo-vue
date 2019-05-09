@@ -6,7 +6,7 @@
             </ol>
         </ul>
         <div v-show="this.todos.length">
-            <ConfirmBtn buttonText="Clear all your todos?" @confirm-action="clearAll" />
+            <ConfirmBtn id="btnConfirm" buttonText="Clear all your todos?" @confirm-action="clearAll" />
         </div>
     </div>
 </template>
