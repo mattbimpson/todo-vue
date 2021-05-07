@@ -1,14 +1,11 @@
 <template>
-    <div
-      :class="{'todo-container': !completed, 'todo-container completed': completed}"
-      @click=toggleCompleted>
-        <div class='todo-item'>
-            {{todo.text}}
-        </div>
-        <div class='todo-controls'>
-            <input type="button" class="btn" value="remove" @click="remove" />
-        </div>
-    </div>
+  <div class="flex mb-5 w-80 p-3 rounded justify-between text-black items-baseline"
+    :class="{'bg-green-300 line-through': !completed, 'bg-white': completed}"
+    @click="toggleCompleted"
+    >
+    {{todo.text}}
+    <input type="button" class="p-1 rounded text-black" value="remove" @click="remove" />
+  </div>
 </template>
 
 <script>
@@ -34,36 +31,3 @@ export default {
 }
 
 </script>
-
-<style scoped>
-.todo-container.completed {
-    text-decoration: line-through;
-    color: darkgray;
-    background-color: darkgreen;
-}
-
-.todo-item {
-    display: block;
-}
-
-.todo-controls {
-    font-size: small;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.todo-container {
-    display: flex;
-    justify-content: space-between;
-    border-radius: 5px;
-    background: darkgray;
-    margin: 5px;
-    padding: 15px;
-    width: 600px;
-    text-align: center;
-}
-
-.btn {
-    border-radius: 5px;
-}
-</style>

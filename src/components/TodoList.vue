@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container p-8 mx-auto lg:px-4">
     <ul>
       <ol>
         <Todo v-for="item in todos" :key="item.id" :todo="item" />

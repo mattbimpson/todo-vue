@@ -1,18 +1,23 @@
 <template>
   <div id="app">
-    <div class="header">
+    <div class="w-96 mx-auto">
+      <div class="text-center text-xl mt-4">
         stuff to do
+      </div>
+      <div class="container px-8 pt-20 mx-auto lg:px-4">
+        <input type="text" id="txtTodo" class="p-1 rounded text-black" placeholder="what do you need to do?" v-model='description' />
+        <input type="button" id="btnAdd" class="p-1 rounded text-black mx-1" @click='addTodo' value="add todo" :disabled=addDisabled />
+      </div>
+      <TodoList />
     </div>
-    <div class="add-container">
-      <input type="text" id="txtTodo" placeholder="what do you need to do?" v-model='description' />
-      <input type="button" id="btnAdd" class="btn" @click='addTodo' value="add todo" :disabled=addDisabled />
-    </div>
-    <TodoList />
   </div>
 </template>
 
 <style>
-
+html {
+  background-color: #282c34;
+  color: white;
+}
 </style>
 
 <script>

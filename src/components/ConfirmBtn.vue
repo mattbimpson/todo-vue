@@ -1,13 +1,13 @@
 <template>
-    <div>
-        <div v-if="!confirming">
-            <input type="button" id="btnMain" :value="buttonText" @click="toggleConfirm" />
-        </div>
-        <div v-if="confirming">
-            <input type="button" class="confirm-yes" value="Yes" @click="confirmYes" />
-            <input type="button" class="confirm-no" value="No" @click="confirmNo" />
-        </div>
-    </div>
+  <div>
+    <div v-if="!confirming">
+    <input type="button" id="btnMain" class="p-1 rounded text-black" :value="buttonText" @click="toggleConfirm" />
+  </div>
+  <div v-if="confirming">
+    <input type="button" class="p-1 rounded text-black bg-green-300 mr-5" value="Yes" @click="confirmYes" />
+    <input type="button" class="p-1 rounded text-black bg-red-300" value="No" @click="confirmNo" />
+  </div>
+</div>
 </template>
 <script>
 export default {
@@ -32,19 +32,4 @@ export default {
   }
 }
 </script>
-<!--<style scoped>
-input {
-    border-radius: 5px;
-    border: 0px;
-}
 
-.confirm-yes {
-    background-color: lightgreen;
-    padding: 5px;
-    margin-right: 5px;
-}
-.confirm-no {
-    background-color: lightcoral;
-    padding: 5px;
-}
-</style>-->
