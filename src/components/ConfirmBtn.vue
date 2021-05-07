@@ -32,7 +32,7 @@ methods: {
 }
 }
 </script>
-<style scoped>
+<!--<style scoped>
 input {
     border-radius: 5px;
     border: 0px;
@@ -47,4 +47,4 @@ input {
     background-color: lightcoral;
     padding: 5px;
 }
-</style>
+</style>-->
