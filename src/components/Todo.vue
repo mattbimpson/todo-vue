@@ -1,10 +1,11 @@
 <template>
-    <div :class="{'todo-container': !completed, 'todo-container completed': completed}">
+    <div
+      :class="{'todo-container': !completed, 'todo-container completed': completed}"
+      @click=toggleCompleted>
         <div class='todo-item'>
             {{todo.text}}
         </div>
         <div class='todo-controls'>
-            done <input type="checkbox" @change="toggleCompleted" :model="completed" id="btnDone" />
             <input type="button" class="btn" value="remove" @click="remove" />
         </div>
     </div>
@@ -46,15 +47,18 @@ export default {
 }
 
 .todo-controls {
-    display: block;
     font-size: small;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .todo-container {
+    display: flex;
+    justify-content: space-between;
     border-radius: 5px;
     background: darkgray;
-    padding: 5px;
-    margin-top: 5px;
+    margin: 5px;
+    padding: 15px;
     width: 600px;
     text-align: center;
 }
