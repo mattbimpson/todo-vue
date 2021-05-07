@@ -1,6 +1,6 @@
 <template>
-  <div class="flex mb-5 w-80 p-3 rounded justify-between text-black items-baseline"
-    :class="{'bg-green-300 line-through': !completed, 'bg-white': completed}"
+  <div id="todo" class="flex mb-5 w-80 p-3 rounded justify-between text-black items-baseline"
+    :class="{'bg-green-300 line-through': completed, 'bg-white': !completed}"
     @click="toggleCompleted"
     >
     {{todo.text}}

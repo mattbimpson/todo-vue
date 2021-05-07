@@ -1,16 +1,16 @@
-import { mount, createLocalVue } from '@vue/test-utils'
-import TodoList from '../../../src/components/TodoList.vue'
-import Vuex from 'vuex'
+import { mount, createLocalVue } from '@vue/test-utils';
+import TodoList from '../components/TodoList.vue';
+import Vuex from 'vuex';
 
-const localVue = createLocalVue()
+const localVue = createLocalVue();
 
-localVue.use(Vuex)
+localVue.use(Vuex);
 
 /* eslint-disable */
 describe('TodoList', () => {
     //let actions
-    let store
-    let getters
+    let store;
+    let getters;
 
     beforeEach(() => {
         // actions = {
@@ -18,15 +18,15 @@ describe('TodoList', () => {
         // }
         getters = {
             todos: () => [{id: 0, text: 'test'}]
-        }
+        };
         store = new Vuex.Store({
             getters
-        })
+        });
     })
 
     it('should render', () => {
-        const todo = {id: 0, text: 'some text'}
-        const wrapper = mount(TodoList, { propsData: {}, store, localVue })
+        const todo = {id: 0, text: 'some text'};
+        const wrapper = mount(TodoList, { propsData: {}, store, localVue });
     })
 
     // it('should call clearAll when clear button clicked', () => {
