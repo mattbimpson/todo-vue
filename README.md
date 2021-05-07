@@ -1,24 +1,24 @@
 # todo-vue
 
-## Project setup
-```
-npm install
-```
+## a simple vuejs app with Vuex state management & TailwindCSS.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### TailwindCSS - 'utility first' css.
+After installing the tailwind npm packages and adding the import to main.js, you can use all the built-in Tailwind css classes.
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
+For example,
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+The todo items (see Todo.vue) have a class of "flex mb-5 w-80 p-3 rounded justify-between text-black items-baseline".
+
+
+This translates to the following;
+
+
+- flex            -    display: flex
+- mb-5            -    margin-bottom: 5px
+- w-80            -    width: 20rem
+- p-3             -    padding: 3px
+- rounded         -    border-radius: 0.25rem
+- text-black      -    color: black
+- items-baseline  -    align-items: baseline
