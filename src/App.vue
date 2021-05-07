@@ -10,7 +10,10 @@
     <TodoList />
   </div>
 </template>
-<style src="./styles/app.css"></style>
+
+<style>
+
+</style>
 
 <script>
 import * as a from './store/action-types'

@@ -11,25 +11,25 @@
 </template>
 <script>
 export default {
-name: 'ConfirmBtn',
-props: ['buttonText'],
-data: function () {
+  name: 'ConfirmBtn',
+  props: ['buttonText'],
+  data: function () {
     return {
-        confirming: false
+      confirming: false
     }
-},
-methods: {
+  },
+  methods: {
     toggleConfirm () {
-        this.confirming = !this.confirming
+      this.confirming = !this.confirming;
     },
     confirmYes () {
-        this.$emit('confirm-action')
-        this.toggleConfirm()
+      this.$emit('confirm-action');
+      this.toggleConfirm();
     },
     confirmNo () {
-        this.toggleConfirm()
+      this.toggleConfirm();
     }
-}
+  }
 }
 </script>
 <!--<style scoped>
