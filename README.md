@@ -24,7 +24,7 @@ This translates to the following;
 - items-baseline  -    align-items: baseline
 
 
-You can also extract out the Tailwind CSS classes from your marup into their own class, as you would normally, using the @apply keyword; (See ConfirmBtn.vue)
+You can also extract out the Tailwind CSS classes from your markup into their own class, as you would normally, using the @apply keyword; (See ConfirmBtn.vue)
 
 <input type="button" class="btn"
 
